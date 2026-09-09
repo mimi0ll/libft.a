@@ -8,10 +8,10 @@ size_t ft_strlcat(char *dst, const char *src, size_t datasize)
     if (datasize <= dst_len)
         return(datasize + src_len);
 
-    while (src[i] && (dst_len + 1) < (datasize - 1))
+    while (src[i] && (dst_len + 1 +i) < datasize)
 
     {
-        dst[dst_len + 1] = src[i];
+        dst[dst_len + i] = src[i];
         i++;
     }
     dst[dst_len + i] = '\0';
