@@ -8,3 +8,8 @@ void *ft_calloc(size_t count, size_t size)
     ft_bzero(ptr, count * size);
     return (ptr);
 }
+
+
+
+
+// count = num of elements   size = size of each element
