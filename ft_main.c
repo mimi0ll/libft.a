@@ -124,5 +124,32 @@ printf("\n===== STRCHR =====\n");
 
 
 
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
+int main(void)
+{
+    char    *str;
+    char    **result;
+    int     i;
+
+    /* TEST ITOA */
+    str = ft_itoa(-12345);
+    printf("itoa: %s\n", str);
+    free(str);
+
+    /* TEST SPLIT */
+    result = ft_split("hello world 42", ' ');
+    i = 0;
+    while (result[i])
+    {
+        printf("split[%d] = %s\n", i, result[i]);
+        free(result[i]);
+        i++;
+    }
+    free(result);
+
+    return (0);
+}
 
